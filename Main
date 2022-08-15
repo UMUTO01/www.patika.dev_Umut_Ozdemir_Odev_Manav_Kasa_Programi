@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Kac kilo Armut aldiniz: ");
+        double a = scan.nextDouble();
+        System.out.println("Kac kilo Elma aldınız: ");
+        double b = scan.nextDouble();
+        System.out.println("Kac kilo Dometes aldınız: ");
+        double c = scan.nextDouble();
+        System.out.println("Kac kilo MuZ aldınız: ");
+        double d = scan.nextDouble();
+        System.out.println("Kac kilo patlıcan aldınız: ");
+        double e = scan.nextDouble();
+        System.out.println("Toplamda "+KgCal(a,b,c,d,e)+" Tl tutarında alışveriş yaptınız.");
+
+
+    }
+    public static double KgCal(double Arm, double  Elm, double Dom, double Muz, double Pat){
+        double NewCal = Arm*(2.14)+Elm*(3.67)+Dom*(1.11)+Muz*(0.95)+Pat*(5.00);
+        return NewCal;
+    }
+}
